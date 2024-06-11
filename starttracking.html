@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Fitness Tracker
+    </header>
+    <main>
+        <div class="container">
+            <h2>Add Exercise</h2>
+            <form id="exercise-form">
+                <label for="exercise-name">Exercise Name</label>
+                <input type="text" id="exercise-name" required>
+                <label for="exercise-duration">Duration (minutes)</label>
+                <input type="number" id="exercise-duration" required>
+                <button type="submit">Add Exercise</button>
+            </form>
+           
+            <h2>Exercises Done</h2>
+            <ul id="exercise-list"></ul>
+        </div>
+        <div class="container">
+            <h2>Add Calorie Intake</h2>
+            <form id="calorie-form">
+                <label for="calorie-food">Food Item</label>
+                <input type="text" id="calorie-food" required>
+                <label for="calorie-amount">Calories</label>
+                <input type="number" id="calorie-amount" required>
+                <button type="submit">Add Calorie</button>
+            </form>
+            <h2>Calories Intake</h2>
+            <ul id="calorie-list"></ul>
+        </div>
+        <div class="container" style="flex-grow: 2;">
+            <h2>Insights</h2>
+            <canvas id="exercise-chart"></canvas>
+            <canvas id="calorie-chart"></canvas>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
